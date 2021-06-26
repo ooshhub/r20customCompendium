@@ -65,7 +65,7 @@ Download the [latest version](https://minhaskamal.github.io/DownGit/#/home?url=h
 1. Mini Icon - this can be dragged left and right to desired position. In case the main UI somehow gets lost at sea, a double-right-click on this Icon will restore the UI to the middle of the screen with a preset height.
 2. Header & Minimise Button - The frame can be dragged around by the Header. Double-click the Header to collapse the frame. Click the Minimise Button to close the main UI. Left-clicking the Mini Icon at the top of the canvas will restore the frame.
 
-The main frame cant be resized via the bottom-right corner. The resize handle currently won't display in Chrome (known bug).
+The main frame can be resized via the bottom-right corner. **The resize handle currently won't display in Chrome** (known bug).
 
 ## GM controls:
 These controls are GM-only and hidden from players.
