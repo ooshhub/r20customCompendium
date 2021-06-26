@@ -1,0 +1,38 @@
+{
+
+    "manifest_version": 2,
+    "name": "customCompendiumChrome",
+    "version": "0.1.0",
+  
+    "description": "Roll20 Custom Compendium",
+  
+    "icons": {
+      "48": "./ff/icons/logo.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+
+    "browser_action": {
+        "default_title": "ooshCC-chrome"
+      },
+    "content_scripts": [
+      {
+        "matches": ["*://*.roll20.net/*"],
+        "js": ["bootstrap.js"],
+        "css": ["ff/Style/cc.css"],
+        "all_frames": false,
+        "run_at": "document_idle"
+      }
+    ],
+    "web_accessible_resources": [
+        "ff/Scripts/menu.js",
+        "ff/Scripts/extendUI.js",
+        "ff/Scripts/helpers.js",
+        "ff/Scripts/classes.js",
+        "ff/Systems/roll20_5e/*.js",
+        "ff/Utils/*.js"
+    ]
+  }
