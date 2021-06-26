@@ -1,3 +1,5 @@
+## [Latest Version](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ooshhub/r20customCompendium/tree/main/0.1.0/customCompendium)
+
 # Custom Compendium v0.1.0
 
 Custom Compendium browser extension for Roll 20. Manage repeating entries with a drag & drop UI to save custom Spells, Traits, Items & Proficiencies. Organise them into Collections so you can drop custom Classes, Races, Feats and Background straight onto your character.
@@ -24,7 +26,7 @@ A real Custom Compendium. Adding the ability to mass-import/export characters, N
 
 ## Installation
 <color="red">This is currently a combined package for both FireFox and Chrome with two **manifest.json** files. Ensure you select the right one!</color>
-Download the latest version. Place in a folder somewhere on your PC. Or cloud storage. Or wherever.
+Download the [latest version](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ooshhub/r20customCompendium/tree/main/0.1.0/customCompendium). Place in a folder somewhere on your PC. Or cloud storage. Or wherever.
 
 **Chrome**:
   1. Enable developer mode - https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest
