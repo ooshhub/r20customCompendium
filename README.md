@@ -65,6 +65,8 @@ Download the [latest version](https://minhaskamal.github.io/DownGit/#/home?url=h
 1. Mini Icon - this can be dragged left and right to desired position. In case the main UI somehow gets lost at sea, a double-right-click on this Icon will restore the UI to the middle of the screen with a preset height.
 2. Header & Minimise Button - The frame can be dragged around by the Header. Double-click the Header to collapse the frame. Click the Minimise Button to close the main UI. Left-clicking the Mini Icon at the top of the canvas will restore the frame.
 
+The main frame cant be resized via the bottom-right corner. The resize handle currently won't display in Chrome (known bug).
+
 ## GM controls:
 These controls are GM-only and hidden from players.
 
@@ -170,6 +172,7 @@ Some Category types (linked to sheet-specific repeating_sections) can grab linke
 - Full extension script injection will be attempted when a character sheet is popped out. This results in a pop-up after the 30 second timeout expires. Fix should be reasonably straight-forward.
 - Any crash in the Dialog scripts will disable the button functionality. There's a fallback script outside the dialog scope, so the X close button in the top right should still destroy the frame. My limited coding ability means this will probably remain as the solution to Dialog errors, unless the fallback fails.
 - Tooltip on the top-most item in the table can be cut off. This is going to require some rejigging of the HTML in a way that doesn't break the full frame layout. I've spent enough time wrestling with CSS for now, but will get to it.
+- The resize handle in the bottom-right of the main UI doesn't display in Chrome. Unsure why, or how to fix.
 
 ## Issues
 - There are a few places in the code where I've used an async timeout function to prevent errors from happening. I'll try to find better ways of awaiting Roll20 functions that don't rely on this, as long lag times could lead to errors.
