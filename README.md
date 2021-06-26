@@ -76,7 +76,7 @@ These controls are GM-only and hidden from players.
   - Export the current Profile (only the currently-selected Profile in the drop-down) as a JSON. Good for backing up your work, or trasnferring between Campaigns.
   - Import from JSON (only a JSON created by Custom Compendium) to the currently selected Compendium Profile.
   - You can use these to merge Profiles, for example:
-     i) select Custom Spells Profile => export to JSON.\n
+     i) select Custom Spells Profile => export to JSON.<br>
      ii) select Custom Traits Profile => export to JSON.
      iii) create New Profile: Homebrew
      iv) select Profile: Homebrew
