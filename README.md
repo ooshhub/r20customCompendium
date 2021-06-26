@@ -9,6 +9,9 @@ Currently supported:
   - browsers: FireFox, Chrome
   - character sheets: dnd5e by Roll20
 
+![occ](https://user-images.githubusercontent.com/74662220/123506131-d665b300-d6a1-11eb-9321-687542e95202.gif)
+
+
 ## What this is:
 
 A drag & drop storage facility for customised character sheet data. The purpose of this extension is to allow easy and ready access to customised Repeating Entries, and to be able to move them between Campaigns. This is a convenience storage method, and nothing more - it doesn't enable anything that can't currently be done with some tiresome copy & pasting.
