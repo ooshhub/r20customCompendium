@@ -75,14 +75,14 @@ These controls are GM-only and hidden from players.
 **2. Import & Export:**
   - Export the current Profile (only the currently-selected Profile in the drop-down) as a JSON. Good for backing up your work, or trasnferring between Campaigns.
   - Import from JSON (only a JSON created by Custom Compendium) to the currently selected Compendium Profile.
-  - You can use these to merge Profiles, for example:
+  - You can use these to merge Profiles, for example:<br>
      i) select Custom Spells Profile => export to JSON.<br>
-     ii) select Custom Traits Profile => export to JSON.
-     iii) create New Profile: Homebrew
-     iv) select Profile: Homebrew
-     v) import Custom Spells.JSON
-     vi) import Custom Traits.JSON
-     vii) the Homebrew profile now contains all the data from your Spells & Traits compendiums
+     ii) select Custom Traits Profile => export to JSON.<br>
+     iii) create New Profile: Homebrew<br>
+     iv) select Profile: Homebrew<br>
+     v) import Custom Spells.JSON<br>
+     vi) import Custom Traits.JSON<br>
+     vii) the Homebrew profile now contains all the data from your Spells & Traits compendiums<br>
 
 **3. Sheet Thief Mode:**
   - This is the primary method of adding data to the Compendium. Toggling this on will enabled drag & drop from a character sheet to the Header drop target on the main UI. Valid drag targets should be highlighted in blue on any active character sheet. If you add any repeating section to the sheet while Sheet Thief is active, you will need to toggle it off and on again to make them valid targets.
