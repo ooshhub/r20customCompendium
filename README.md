@@ -25,7 +25,9 @@ A real Custom Compendium. Adding the ability to mass-import/export characters, N
 - This extension stores data in the Campaign object. Any Roll20 changes to the Campaign data structure could quite possibly delete all Custom Compendium data. It also saves basic UI settings in the Player object. Logging is as another player may result in a different UI view.
 
 ## Installation
-```diff -This is currently a combined package for both FireFox and Chrome with two **manifest.json** files. Ensure you select the right one!```
+```diff
+- This is currently a combined package for both FireFox and Chrome with two **manifest.json** files. Ensure you select the right one!
+```
 Download the [latest version](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ooshhub/r20customCompendium/tree/main/customCompendium). Place in a folder somewhere on your PC. Or cloud storage. Or wherever.
 
 **Chrome**:
