@@ -9,7 +9,7 @@ Currently supported:
 
 ## What this is:
 
-A drag & drop storage facility for customised character sheet data. The purpose of this extension is to allow easy and ready access to customised repeating entries, and to be able to move them between campaigns. This is a convenience storage method, and nothing more - it doesn't enable anything that can't currently be done with some tiresome copy & pasting.
+A drag & drop storage facility for customised character sheet data. The purpose of this extension is to allow easy and ready access to customised Repeating Entries, and to be able to move them between Campaigns. This is a convenience storage method, and nothing more - it doesn't enable anything that can't currently be done with some tiresome copy & pasting.
 
 ## What this is not:
 
@@ -23,8 +23,8 @@ A real Custom Compendium. Adding the ability to mass-import/export characters, N
 - This extension stores data in the Campaign object. Any Roll20 changes to the Campaign data structure could quite possibly delete all Custom Compendium data. It also saves basic UI settings in the Player object. Logging is as another player may result in a different UI view.
 
 ## Installation
-
-Download the latest version. Place in a folder somewhere on your PC.
+<color="red">This is currently a combined package for both FireFox and Chrome with two **manifest.json** files. Ensure you select the right one!</color>
+Download the latest version. Place in a folder somewhere on your PC. Or cloud storage. Or wherever.
 
 **Chrome**:
   1. Enable developer mode - https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest
@@ -37,22 +37,24 @@ Download the latest version. Place in a folder somewhere on your PC.
   3. Double-click on **manifest.json**
   4. The extension should start loading if your Roll20 campaign is open, or will load when you next open it
 
+*While in such early development, this will continue to be a combined FF/Chrome package and need to be installed as an unpacked/temporary addon. Sorry for the inconvenience, but I'm very lazy.*
+
 # Quick Start - Basic Use:
-Adding to the Compendium (GM Only):
-  1. Get all of your homebrew/modified content the way you want it on a character sheet, for example a sheet called "Homebrew Spells" with all of thet modified spells right there on the sheet. You possibly already have this part done.
+**Adding to the Compendium (GM Only):**
+  1. Get all of your homebrew/modified content the way you want it on a character sheet, for example a sheet called "Homebrew Spells" with all of your modified spells right there on the sheet. You possibly already have this part done.
   2. Create a New Compendium, or just use the Default, and make sure it is selected.
   3. Toggle "Sheet Thief" mode, and drag the items you want from the character sheet to the drop target in the Custom Compendium UI.
   4. To create a Collection of entries (e.g. Class, Background) select the relevant category, click the "+ New" button and select a name & subcategory. Now click the Edit button next to the new entry.
   5. Toggle the "Add Item" button within the Edit Collection dialog. This enabled drag & drop from the main UI to the required tier of the Collection.
 
-Dropping to a Character Sheet (GM and Player):
+**Dropping to a Character Sheet (GM and Player):**
   1. Items: simply drag & drop the Item you want to the character sheet.
   2. Collections: drag & drop the Collection you want. You should then see a pop-up where you can select which tiers to drop: for example, if you've created a new Level 10 character with the custom class Fool, drag & drop the Fool class entry, the check the boxes for levels 1 through 10.
 
 # The interface:
 ![basicUI](https://user-images.githubusercontent.com/74662220/123499294-ddc29780-d674-11eb-9e93-8e4ceb762293.png)
 
-1. Mini Icon - this can be dragged left and right to desired position. In case the main UI somehow gets lost at sea, a double-right-click will restore it to the middle of the screen with a preset height.
+1. Mini Icon - this can be dragged left and right to desired position. In case the main UI somehow gets lost at sea, a double-right-click on this Icon will restore the UI to the middle of the screen with a preset height.
 2. Header & Minimise Button - The frame can be dragged around by the Header. Double-click the Header to collapse the frame. Click the Minimise Button to close the main UI. Left-clicking the Mini Icon at the top of the canvas will restore the frame.
 
 ## GM controls:
@@ -197,3 +199,9 @@ Anyways, if you're interesting in the code, some pointers:
   - utils/occCC.js - this awkwardly-named file contains the custom dialog Class and functions. It's a bit of a mess, again probably needs the generic, reusable code to be properly separated from the project-specific bits.
   - utils/FileSaver.js - external library for the Import/Export functions
   - style/cc.css - I beg you not to look in here. My CSS-fu is dreadful. Like "I just punched myself in the genitals" awful.
+
+## Finally...
+
+If you're interesting in contributing to the project (or even taking it over completely) let me know. As mentioned above, my CSS is even worse than my JS, so if you have some suggestions for a makeover, or even actual Stylus code to make it better, brilliant! There are some data attributes on the table entries for things like category-specific colouring, or whatever.
+
+A massive thank you to the Roll20 Community, particularly the coders/scripters. The amazing folk there keep me haunting the Forums even though I no longer have a dog in this fight! The Community is the #1 thing I miss about using Roll20 as preferred platform, if you're not already involved on the Forums, get in there!
