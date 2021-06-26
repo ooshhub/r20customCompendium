@@ -196,7 +196,7 @@ The initial development of this whole project was just coming to terms with the 
 I no longer use Roll20 for games, and never got involved with any Homebrew - so there's probably a bunch of improvements to usability that haven't occurred to me. I'd also be happy to handball the whole project to someone else who's more actively involved with Roll20, and a better coder. The last part probably applies to most of the population of Earth.
 
 Anyways, if you're interesting in the code, some pointers:
-  - bootstrap.js - the only extension-scope script. This can only communicate with the injected scripts via the customEvent element inserted into the page. It uses a pretty script injection method to insert the rest of the code into the browser window. Worth noting that no Roll20 code is modified or patched.
+  - bootstrap.js - the only extension-scope script. This can only communicate with the injected scripts via the customEvent element inserted into the page. It uses a pretty common script injection method to insert the rest of the code into the browser window. Worth noting that no Roll20 code is modified or patched.
   - scripts/menu.js - the core UI HTML, JS and JQ
   - scripts/extendUI.js - Mutation Observer for sheet opening events, and extended functions for the UI - drag & drop, drawing the data table
   - scripts/classes.js - definitions for CCItem and CCCollection
