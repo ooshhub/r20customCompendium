@@ -176,5 +176,24 @@ Some Category types (linked to sheet-specific repeating_sections) can grab linke
 - A rejigging of the customCompendium5e.js and helpers5e.js code (or, more honestly, "complete rewrite") to split the functions into generic and sheet-specific groups. I think real coders call this 'decompositioning' or something. I call it 'de-ooshing', or sometimes, 'un-potating' the code. This will make it pretty easy to add new sheets - at the moment, it's semi-hard-coded (that sounds.... all kinds of wrong) for the 5e sheet.
 - A few things mentioned above (mostly simple functions for Resource sections and linked data) and potentially an interface to add/edit linked data.
 
+
 # Development, and the idiot responsible
 
+I'm pretty new to coding with no actual IT education. This much will be immediately obvious to anyone with any real ability who looks at my code.
+The project started as an exercise in "I wonder if this is even possible? How does one even write a browser extension?". I didn't even know what JQuery was, exactly, when I started - this is painfully obvious in the code, with some shorthand JQ functions nestled in between wordy, vanilla JS functions operating on the same HTML elements. So... apologies in advance if you're going to read through the code, it's a mess! I'll endeavour to rewrite and restructure it before packaging properly as an extension.
+The initial development of this whole project was just coming to terms with the interaction between JQ drag & drop, HTML5 drag & drop, and their interactions with each other and the way iframes work when a character sheet is opened. [Here is a behind-the-scenes video](https://www.youtube.com/watch?v=AiyJI5Kmcro) of me attempting to tame the drag & drop process. You can even see HTML5 getting involved around the 50-second mark.
+
+I no longer use Roll20 for games, and never got involved with any Homebrew - so there's probably a bunch of improvements to usability that haven't occurred to me. I'd also be happy to handball the whole project to someone else who's more actively involved with Roll20, and a better coder. The last part probably applies to most of the population of Earth.
+
+Anyways, if you're interesting in the code, some pointers:
+  - bootstrap.js - the only extension-scope script. This can only communicate with the injected scripts via the customEvent element inserted into the page. It uses a pretty script injection method to insert the rest of the code into the browser window. Worth noting that no Roll20 code is modified or patched.
+  - scripts/menu.js - the core UI HTML, JS and JQ
+  - scripts/extendUI.js - Mutation Observer for sheet opening events, and extended functions for the UI - drag & drop, drawing the data table
+  - scripts/classes.js - definitions for CCItem and CCCollection
+  - scripts/helpers.js - all manner of Helper functions, from Roll20 stuff to HTML insertion & manipulation
+  - systems/roll20_5e/customCompendium5e.js - the core data manipulation functions for moving data in & out. This is the code in most urgent need of a rewrite, and also some of the oldest code in the project. There's a bunch of stuff in here that needs to be split to another module of generic functions, and the 5e-specific parts can easily be condensed into a much more efficient module
+  - systems/helpers5e.js - helper functions specific to the 5e sheet. This also needs an overhaul, mostly to be organised into a template-y kind of structure to make it easier to rewrite the functions for other character sheets
+  - systems/sheetFluffer5e.js - a seperate injection inside the character sheet iframe. Anything that needs to run inside the character sheet iframe needs to be in here. Communication with the outside world is via the customEvents element.
+  - utils/occCC.js - this awkwardly-named file contains the custom dialog Class and functions. It's a bit of a mess, again probably needs the generic, reusable code to be properly separated from the project-specific bits.
+  - utils/FileSaver.js - external library for the Import/Export functions
+  - style/cc.css - I beg you not to look in here. My CSS-fu is dreadful. Like "I just punched myself in the genitals" awful.
