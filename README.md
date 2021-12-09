@@ -206,13 +206,7 @@ Anyways, if you're interesting in the code, some pointers:
   - scripts/helpers.js - all manner of Helper functions, from Roll20 stuff to HTML insertion & manipulation
   - systems/roll20_5e/customCompendium5e.js - the core data manipulation functions for moving data in & out. This is the code in most urgent need of a rewrite, and also some of the oldest code in the project. There's a bunch of stuff in here that needs to be split to another module of generic functions, and the 5e-specific parts can easily be condensed into a much more efficient module
   - systems/helpers5e.js - helper functions specific to the 5e sheet. This also needs an overhaul, mostly to be organised into a template-y kind of structure to make it easier to rewrite the functions for other character sheets
-  - systems/sheetFluffer5e.js - a seperate injection inside the character sheet iframe. Anything that needs to run inside the character sheet iframe needs to be in here. Communication with the outside world is via the customEvents element.
+  - systems/sheetFluffer5e.js - a seperate injection inside the character sheet iframe. Anything that needs to run inside the character sheet iframe needs to be in here. Communication with the outside world is via the customEvents DOM element.
   - utils/occCC.js - this awkwardly-named file contains the custom dialog Class and functions. It's a bit of a mess, again probably needs the generic, reusable code to be properly separated from the project-specific bits.
   - utils/FileSaver.js - external library for the Import/Export functions
   - style/cc.css - I beg you not to look in here. My CSS-fu is dreadful. Like "I just punched myself in the genitals" awful.
-
-## Finally...
-
-If you're interesting in contributing to the project (or even taking it over completely) let me know. As mentioned above, my CSS is even worse than my JS, so if you have some suggestions for a makeover, or even actual Stylus code to make it better, brilliant! There are some data attributes on the table entries for things like category-specific colouring, or whatever.
-
-A massive thank you to the Roll20 Community, particularly the coders/scripters. The amazing folk there keep me haunting the Forums even though I no longer have a dog in this fight! The Community is the #1 thing I miss about using Roll20 as preferred platform, if you're not already involved on the Forums, get in there!
